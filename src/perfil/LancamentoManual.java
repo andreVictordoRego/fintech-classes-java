@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class LancamentoManual {
 
-	//ATRIBUTOS
 	private int idLancamento;
 	private String descricao;
 	private Date data;
@@ -13,14 +12,13 @@ public class LancamentoManual {
 	private String condPag;
 	private String tipo;
 	private String periodicidade;
-	private String categoria;
+	private Categoria categoria;
 	
-	//CONSTRUTORES
 
 	public LancamentoManual() {
 	}
 
-	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
+	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, Categoria categoria) {
         this.idLancamento = idLancamento;
         this.descricao = descricao;
         this.data = data;
@@ -32,7 +30,7 @@ public class LancamentoManual {
         this.categoria = categoria;
     }
 
-    public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
+    public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, Categoria categoria) {
         this.idLancamento = idLancamento;
         this.data = data;
         this.vlLancamento = vlLancamento;
@@ -107,15 +105,15 @@ public class LancamentoManual {
 		this.periodicidade = periodicidade;
 	}
 	
-		public String getCategoria() {
+		public Categoria getCategoria() {
 		return categoria;
 	}
 
-	public void setCategoria(String categoria) {
+	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
 
-	public void cadastrarLancamento(int idLancamento, String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
+	public void cadastrarLancamento(int idLancamento, String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, Categoria categoria) {
 		this.setIdLancamento(idLancamento);
 		this.setDescricao(descricao);
 		this.setData(data);
@@ -131,7 +129,7 @@ public class LancamentoManual {
 		return "Descrição: " + descricao + "\nData: " + data + "\nValor lançamento: " + vlLancamento + "\nMetodo de pagamento: " + metodoPagto + "\nCondição de pagamento: " + condPag + "\nTipo: " + tipo + "\nPeriodicidade: " + periodicidade + "\nCategoria:" + categoria;	
 	}
 	
-	public void editarLancamento(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String periodicidade, String categoria) {
+	public void editarLancamento(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String periodicidade, Categoria categoria) {
 		this.setDescricao(descricao);
 		this.setData(data);
 		this.setVlLancamento(vlLancamento);

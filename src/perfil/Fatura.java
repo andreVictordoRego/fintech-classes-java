@@ -40,7 +40,13 @@ public class Fatura {
 	public void setVlTotal(Double vlTotal) {
 		this.vlTotal = vlTotal;
 	}
-
+	
+	
+	public void cadastrarFatura(int idFatura, Date dtVenc, Double vlTotal) {
+		this.setIdFatura(idFatura);
+		this.setDtVenc(dtVenc);
+		this.setVlTotal(vlTotal);
+	}
 
 	public String consultarFatura(int idFatura) {	
 		return "Data de Vencimento da Fatura: " + dtVenc + "\nValor Total da Fatura: " + vlTotal;

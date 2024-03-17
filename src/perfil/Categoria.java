@@ -36,6 +36,10 @@ public class Categoria {
 		this.tipoCategoria = tipoCategoria;
 	}
 	
+	@Override
+    public String toString() {
+        return nomeCategoria;
+    }	
 	
 	public void cadastrarCategoria(int idCategoria, String nomeCategoria, String tipoCategoria) {
 		this.setIdCategoria(idCategoria);

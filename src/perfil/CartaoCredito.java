@@ -16,7 +16,7 @@ public class CartaoCredito {
 	public CartaoCredito() {
 	}
 	
-	public CartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal,String senhaCartao, boolean lancamentoAuto) {
+	public CartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal,String senhaCartao, boolean lancamentoAuto, Bandeira bandeira, Fatura fatura) {
 		this.apelido = apelido;
 		this.idCartao = idCartao;
 		this.nrCartao = nrCartao;
@@ -28,6 +28,8 @@ public class CartaoCredito {
 		this.limiteTotal = limiteTotal;
 		this.senhaCartao = senhaCartao;
 		this.lancamentoAuto = lancamentoAuto;
+		this.bandeira = bandeira;
+		this.fatura = fatura;
 	}
 
 	
@@ -137,7 +139,7 @@ public class CartaoCredito {
 		this.bandeira = bandeira;
 	}
 
-	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal, String senhaCartao){
+	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal, String senhaCartao, Bandeira bandeira, Fatura fatura){
 		this.setLancamentoAuto(true);
 		this.setIdCartao(idCartao);
 		this.setNrCartao(nrCartao);
@@ -148,9 +150,11 @@ public class CartaoCredito {
 		this.setDtVencFatura(dtVencFatura);
 		this.setLimiteDispo(limiteDispo);	
 		this.setSenhaCartao(senhaCartao);
+		this.setBandeira(bandeira);
+		this.setFatura(fatura);
 	}
 	
-	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal){
+	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal, Bandeira bandeira, Fatura fatura){
 		this.setLancamentoAuto(false);
 		this.setIdCartao(idCartao);
 		this.setNrCartao(nrCartao);
@@ -159,11 +163,15 @@ public class CartaoCredito {
 		this.setDtVencFatura(dtVencFatura);
 		this.setDtValidadeCartao(dtValidadeCartao);
 		this.setDtVencFatura(dtVencFatura);
-		this.setLimiteDispo(limiteDispo);	
+		this.setLimiteDispo(limiteDispo);
+		this.setBandeira(bandeira);
+		this.setFatura(fatura);
 	}
 	
 	public String consultarCartaoCredito(String apelido){
-		return "Apelido: " + apelido + "\nNúmero cartão: " + nrCartao + "\nTipo: " + tipo + "\nData de Fechamento Fatura: " + dtFechamentoFatura + "\nData de Vencimento Fatura: " + dtVencFatura + "\nData de Validade do Cartao: " + dtValidadeCartao + "\nLimite Disponível: " + limiteDispo + "\nLimite Total: " + limiteTotal + "\nBandeira: " + bandeira;
+		String varBandeira = bandeira.getNome();
+		Double verFatura = fatura.getVlTotal();
+		return "Apelido: " + apelido + "\nNúmero cartão: " + nrCartao + "\nTipo: " + tipo + "\nData de Fechamento Fatura: " + dtFechamentoFatura + "\nData de Vencimento Fatura: " + dtVencFatura + "\nData de Validade do Cartao: " + dtValidadeCartao + "\nLimite Disponível: " + limiteDispo + "\nLimite Total: " + limiteTotal + "\nBandeira: " + varBandeira + "\nFatura: " + verFatura;
 	}
 	
 	public void deletarCartaoCredito(String apelido) {
