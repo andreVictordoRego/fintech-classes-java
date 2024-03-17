@@ -25,9 +25,11 @@ public class ClasseTeste4 {
 		cartao1.cadastrarCartaoCredito("CartaoNubank", 1, 312321, "credito", dataLancamento, dataLancamento, dataLancamento, 999999.0, 92319.0, "senha");
 		
 		
+		
 		System.out.println(cartao1.consultarCartaoCredito("apelido"));
 		cartao1.setLimiteTotal(99999999.0);
 		cartao1.setLimiteDispo(98823.0);
+		cartao1.setBandeira(1, "visa");
 		
 		System.out.println(cartao1.consultarCartaoCredito("apelido"));
 	}
