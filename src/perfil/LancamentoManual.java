@@ -13,13 +13,14 @@ public class LancamentoManual {
 	private String condPag;
 	private String tipo;
 	private String periodicidade;
+	private String categoria;
 	
 	//CONSTRUTORES
 
 	public LancamentoManual() {
 	}
 
-	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
 		this.setIdLancamento(idLancamento);
 		this.setDescricao(descricao);
 		this.setData(data);
@@ -28,15 +29,17 @@ public class LancamentoManual {
 		this.setCondPag(condPag);
 		this.setTipo(tipo);
 		this.setPeriodicidade(periodicidade);
+		this.setCategoria(categoria);
 	}
 	
-	public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+	public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
 		this.setData(data);
 		this.setVlLancamento(vlLancamento);
 		this.setMetodoPagto(metodoPagto);
 		this.setCondPag(condPag);
 		this.setTipo(tipo);
 		this.setPeriodicidade(periodicidade);
+		this.setCategoria(categoria);
 	}
 
 	public int getIdLancamento() {
@@ -87,7 +90,6 @@ public class LancamentoManual {
 		this.condPag = condPag;
 	}
 
-
 	public String getTipo() {
 		return tipo;
 	}
@@ -103,9 +105,16 @@ public class LancamentoManual {
 	public void setPeriodicidade(String periodicidade) {
 		this.periodicidade = periodicidade;
 	}
+	
+		public String getCategoria() {
+		return categoria;
+	}
 
+	public void setCategoria(String categoria) {
+		this.categoria = categoria;
+	}
 
-	public void cadastrarLancamento(int idLancamento, String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+	public void cadastrarLancamento(int idLancamento, String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
 		this.setIdLancamento(idLancamento);
 		this.setDescricao(descricao);
 		this.setData(data);
@@ -114,19 +123,21 @@ public class LancamentoManual {
 		this.setCondPag(condPag);
 		this.setTipo(tipo);
 		this.setPeriodicidade(periodicidade);
+		this.setCategoria(categoria);
 	}
 
 	public String consultarLancamento(int idLancamento) {
-		return "Descrição: " + descricao + "\nData: " + data + "\nValor lançamento: " + vlLancamento + "\nMetodo de pagamento: " + metodoPagto + "\nCondição de pagamento: " + condPag + "\nTipo: " + tipo + "\nPeriodicidade: " + periodicidade;	
+		return "Descrição: " + descricao + "\nData: " + data + "\nValor lançamento: " + vlLancamento + "\nMetodo de pagamento: " + metodoPagto + "\nCondição de pagamento: " + condPag + "\nTipo: " + tipo + "\nPeriodicidade: " + periodicidade + "\nCategoria:" + categoria;	
 	}
 	
-	public void editarLancamento(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String periodicidade) {
+	public void editarLancamento(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String periodicidade, String categoria) {
 		this.setDescricao(descricao);
 		this.setData(data);
 		this.setVlLancamento(vlLancamento);
 		this.setMetodoPagto(metodoPagto);
 		this.setCondPag(condPag);
 		this.setPeriodicidade(periodicidade);
+		this.setCategoria(categoria);
 	}
 	
 	public void deletarLancamento(int idLancamento) {
@@ -138,5 +149,6 @@ public class LancamentoManual {
 		this.setCondPag(null);
 		this.setTipo(null);
 		this.setPeriodicidade(null);
+		this.setCategoria(null);
 	}
 }

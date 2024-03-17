@@ -22,7 +22,7 @@ public class ClasseTeste2 {
 		
 		LancamentoManual lanc1 = new LancamentoManual();
 		
-		lanc1.cadastrarLancamento(1, "escola", dataLancamento, 100.0, "dinheiro", "a vista", "saida", "mensal");
+		lanc1.cadastrarLancamento(1, "escola", dataLancamento, 100.0, "dinheiro", "a vista", "saida", "mensal", "Educação");
 
 		System.out.println(lanc1.getIdLancamento());
 		System.out.println(lanc1.getDescricao());
@@ -34,7 +34,7 @@ public class ClasseTeste2 {
 		
 		System.out.println(lanc1.consultarLancamento(1));
 		
-		lanc1.editarLancamento("faculdade", dataLancamento, 1000.0, "cartão", "parcelado", "anual");
+		lanc1.editarLancamento("faculdade", dataLancamento, 1000.0, "cartão", "parcelado", "anual", "Educação");
 		System.out.println(lanc1.consultarLancamento(1));
 		
 		lanc1.deletarLancamento(1);
