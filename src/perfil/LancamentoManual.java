@@ -12,21 +12,31 @@ public class LancamentoManual {
 	private String metodoPagto;
 	private String condPag;
 	private String tipo;
+	private String periodicidade;
 	
 	//CONSTRUTORES
 
 	public LancamentoManual() {
 	}
 
-	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto,
-			String condPag, String tipo) {
-		this.idLancamento = idLancamento;
-		this.descricao = descricao;
-		this.data = data;
-		this.vlLancamento = vlLancamento;
-		this.metodoPagto = metodoPagto;
-		this.condPag = condPag;
-		this.tipo = tipo;
+	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+		this.setIdLancamento(idLancamento);
+		this.setDescricao(descricao);
+		this.setData(data);
+		this.setVlLancamento(vlLancamento);
+		this.setMetodoPagto(metodoPagto);
+		this.setCondPag(condPag);
+		this.setTipo(tipo);
+		this.setPeriodicidade(periodicidade);
+	}
+	
+	public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+		this.setData(data);
+		this.setVlLancamento(vlLancamento);
+		this.setMetodoPagto(metodoPagto);
+		this.setCondPag(condPag);
+		this.setTipo(tipo);
+		this.setPeriodicidade(periodicidade);
 	}
 
 	public int getIdLancamento() {
@@ -85,27 +95,48 @@ public class LancamentoManual {
 	public void setTipo(String tipo) {
 		this.tipo = tipo;
 	}
+		
+	public String getPeriodicidade() {
+		return periodicidade;
+	}
 
-	//verificar metodo
-	public void consultar(int idLancamento) {
+	public void setPeriodicidade(String periodicidade) {
+		this.periodicidade = periodicidade;
+	}
+
+
+	public void cadastrarLancamento(int idLancamento, String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade) {
+		this.setIdLancamento(idLancamento);
+		this.setDescricao(descricao);
+		this.setData(data);
+		this.setVlLancamento(vlLancamento);
+		this.setMetodoPagto(metodoPagto);
+		this.setCondPag(condPag);
+		this.setTipo(tipo);
+		this.setPeriodicidade(periodicidade);
+	}
+
+	public String consultarLancamento(int idLancamento) {
+		return "Descrição: " + descricao + "\nData: " + data + "\nValor lançamento: " + vlLancamento + "\nMetodo de pagamento: " + metodoPagto + "\nCondição de pagamento: " + condPag + "\nTipo: " + tipo + "\nPeriodicidade: " + periodicidade;	
 	}
 	
-	//verificar metodo aqui e no astah
-	public void editar(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag) {
-		this.descricao = descricao;
-		this.data = data;
-		this.vlLancamento = vlLancamento;
-		this.metodoPagto = metodoPagto;
-		this.condPag = condPag;
+	public void editarLancamento(String descricao, Date data, Double vlLancamento, String metodoPagto, String condPag, String periodicidade) {
+		this.setDescricao(descricao);
+		this.setData(data);
+		this.setVlLancamento(vlLancamento);
+		this.setMetodoPagto(metodoPagto);
+		this.setCondPag(condPag);
+		this.setPeriodicidade(periodicidade);
 	}
 	
-	public void deletar(int idLancamento) {
-		this.idLancamento = 0;
-		this.descricao = null;
-		this.data = null;
-		this.vlLancamento = 0;
-		this.metodoPagto = null;
-		this.condPag = null;
-		this.tipo = null;
+	public void deletarLancamento(int idLancamento) {
+		this.setIdLancamento(0);
+		this.setDescricao(null);
+		this.setData(null);
+		this.setVlLancamento(0);
+		this.setMetodoPagto(null);
+		this.setCondPag(null);
+		this.setTipo(null);
+		this.setPeriodicidade(null);
 	}
 }

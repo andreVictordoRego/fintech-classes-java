@@ -106,7 +106,6 @@ public class Usuario extends Pessoa {
 		}
 	}
 	
-	// Pesquisar o metodo correto para exclusao de objeto
 	public void deletarUser(int idUsuario, String senha) {
 		super.setCpf(0);
 		super.setDtNasc(null);
@@ -120,7 +119,6 @@ public class Usuario extends Pessoa {
 	}
 
 	public String desconectarApp() {
-		//Pesquisar o metodo correto para desconexão
 		return "Desconectado";
 	}
 	
