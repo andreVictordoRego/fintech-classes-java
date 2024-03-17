@@ -16,15 +16,15 @@ public class ContaBanco {
 	}
 	
 	public ContaBanco(String apelido, String idBanco, int numero, int agencia, String senhaApp, String tipo, Double saldo, boolean lancamentoAuto) {
-		this.setApelido(apelido);
-		this.setIdBanco(idBanco);
-		this.setNumero(numero);
-		this.setAgencia(agencia);
-		this.setSenhaApp(senhaApp);
-		this.setTipo(tipo);
-		this.setSaldo(saldo);
-		this.setLancamentoAuto(lancamentoAuto);
-	}
+        this.apelido = apelido;
+        this.idBanco = idBanco;
+        this.numero = numero;
+        this.agencia = agencia;
+        this.senhaApp = senhaApp;
+        this.tipo = tipo;
+        this.saldo = saldo;
+        this.lancamentoAuto = lancamentoAuto;
+    }
 
 	public String getApelido() {
 		return apelido;

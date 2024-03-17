@@ -21,26 +21,27 @@ public class LancamentoManual {
 	}
 
 	public LancamentoManual(int idLancamento, String descricao, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
-		this.setIdLancamento(idLancamento);
-		this.setDescricao(descricao);
-		this.setData(data);
-		this.setVlLancamento(vlLancamento);
-		this.setMetodoPagto(metodoPagto);
-		this.setCondPag(condPag);
-		this.setTipo(tipo);
-		this.setPeriodicidade(periodicidade);
-		this.setCategoria(categoria);
-	}
-	
-	public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
-		this.setData(data);
-		this.setVlLancamento(vlLancamento);
-		this.setMetodoPagto(metodoPagto);
-		this.setCondPag(condPag);
-		this.setTipo(tipo);
-		this.setPeriodicidade(periodicidade);
-		this.setCategoria(categoria);
-	}
+        this.idLancamento = idLancamento;
+        this.descricao = descricao;
+        this.data = data;
+        this.vlLancamento = vlLancamento;
+        this.metodoPagto = metodoPagto;
+        this.condPag = condPag;
+        this.tipo = tipo;
+        this.periodicidade = periodicidade;
+        this.categoria = categoria;
+    }
+
+    public LancamentoManual(int idLancamento, Date data, double vlLancamento, String metodoPagto, String condPag, String tipo, String periodicidade, String categoria) {
+        this.idLancamento = idLancamento;
+        this.data = data;
+        this.vlLancamento = vlLancamento;
+        this.metodoPagto = metodoPagto;
+        this.condPag = condPag;
+        this.tipo = tipo;
+        this.periodicidade = periodicidade;
+        this.categoria = categoria;
+    }
 
 	public int getIdLancamento() {
 		return idLancamento;

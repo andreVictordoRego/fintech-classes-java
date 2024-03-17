@@ -24,9 +24,7 @@ public class ContaInvest {
 	}
 	
 	//CONSTRUTORES
-	public ContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor,
-			Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao,
-			boolean lancamentoAuto) {
+	public ContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor, Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao, boolean lancamentoAuto) {
 		 	this.idContaInvest = idContaInvest;
 		    this.estrategia = estrategia;
 		    this.produto = produto;

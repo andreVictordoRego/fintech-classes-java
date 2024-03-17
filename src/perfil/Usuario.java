@@ -13,8 +13,6 @@ public class Usuario extends Pessoa {
 		
 	}
 	
-	// Verificar como o Java pode gerar automaticamente o idUsuario
-	// Verificar como editar (override) o retorno do objeto Date
 	public Usuario(int idUsuario, String status, String email, String senha, int cpf, String nome, int telefone, Date dtNasc, String genero) {
 		super.setCpf(cpf);
 		super.setNome(nome);

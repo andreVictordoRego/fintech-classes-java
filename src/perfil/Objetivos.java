@@ -18,15 +18,14 @@ public class Objetivos {
 	}
 
 
-	public Objetivos(int idObjetivo, String nome, Date dtInicial, Date dtFinal, Double vlObjetivo, Double vlAtual,
-			String periodicidade) {
-		this.setIdObjetivo(idObjetivo);
-		this.setNome(nome);
-		this.setDtInicial(dtInicial);
-		this.setDtFinal(dtFinal);
-		this.setVlObjetivo(vlObjetivo);
-		this.setVlAtual(vlAtual);
-		this.setPeriodicidade(periodicidade);
+	public Objetivos(int idObjetivo, String nome, Date dtInicial, Date dtFinal, Double vlObjetivo, Double vlAtual, String periodicidade) {
+	    this.idObjetivo = idObjetivo;
+	    this.nome = nome;
+	    this.dtInicial = dtInicial;
+	    this.dtFinal = dtFinal;
+	    this.vlObjetivo = vlObjetivo;
+	    this.vlAtual = vlAtual;
+	    this.periodicidade = periodicidade;
 	}
 
 	public Objetivos(int idObjetivo, String nome, Date dtInicial, Double vlObjetivo, Double vlAtual, String periodicidade) {

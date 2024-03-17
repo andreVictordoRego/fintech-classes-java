@@ -14,7 +14,6 @@ public class Fatura {
 	}
 
 	public Fatura(int idFatura, Date dtVenc, Double vlTotal) {
-		super();
 		this.idFatura = idFatura;
 		this.dtVenc = dtVenc;
 		this.vlTotal = vlTotal;
