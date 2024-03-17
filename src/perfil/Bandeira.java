@@ -41,4 +41,6 @@ public class Bandeira {
 	public void deletarBandeira(String nome) {
 		this.setNome(null);
 	}
+	
+	
 }
