@@ -1,74 +1,56 @@
 package perfil;
 
+import java.util.Date;
+
 public class CartaoCredito {
 	
-	//ATRIBUTOS
-	private String idBanco; //verificar se é String ou INT
-	private String nome;
-	private int numero;
-	private int agencia;
-	private String senhaApp;
-	private String tipo;
-	private Double saldo;
-	private boolean lacamentoAuto;
+	private String apelido;
+	private int idCartao, nrCartao;
+	private String tipo, senhaCartao;
+	private Date dtFechamentoFatura, dtVencFatura, dtValidadeCartao;
+	private Double limiteDispo,limiteTotal;
+	private boolean lancamentoAuto;
+	private Bandeira bandeira;
 	
-	//CONSTRUTORES
 	public CartaoCredito() {
 	}
-
-	public CartaoCredito(String idBanco, String nome, int numero, int agencia, String senhaApp, String tipo,
-			Double saldo, boolean lacamentoAuto) {
-		super();
-		this.idBanco = idBanco;
-		this.nome = nome;
-		this.numero = numero;
-		this.agencia = agencia;
-		this.senhaApp = senhaApp;
-		this.tipo = tipo;
-		this.saldo = saldo;
-		this.lacamentoAuto = lacamentoAuto;
-	}
-
-	//GETTERS AND SETTERS
 	
-	public String getIdBanco() {
-		return idBanco;
+	public CartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal,String senhaCartao, boolean lancamentoAuto) {
+		this.apelido = apelido;
+		this.idCartao = idCartao;
+		this.nrCartao = nrCartao;
+		this.tipo = tipo;
+		this.dtFechamentoFatura = dtFechamentoFatura;
+		this.dtVencFatura = dtVencFatura;
+		this.dtValidadeCartao = dtValidadeCartao;
+		this.limiteDispo = limiteDispo;
+		this.limiteTotal = limiteTotal;
+		this.senhaCartao = senhaCartao;
+		this.lancamentoAuto = lancamentoAuto;
 	}
 
-	public void setIdBanco(String idBanco) {
-		this.idBanco = idBanco;
+	public String getApelido() {
+		return apelido;
 	}
 
-	public String getNome() {
-		return nome;
+	public void setApelido(String apelido) {
+		this.apelido = apelido;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public int getIdCartao() {
+		return idCartao;
 	}
 
-	public int getNumero() {
-		return numero;
+	public void setIdCartao(int idCartao) {
+		this.idCartao = idCartao;
 	}
 
-	public void setNumero(int numero) {
-		this.numero = numero;
+	public int getNrCartao() {
+		return nrCartao;
 	}
 
-	public int getAgencia() {
-		return agencia;
-	}
-
-	public void setAgencia(int agencia) {
-		this.agencia = agencia;
-	}
-
-	public String getSenhaApp() {
-		return senhaApp;
-	}
-
-	public void setSenhaApp(String senhaApp) {
-		this.senhaApp = senhaApp;
+	public void setNrCartao(int nrCartao) {
+		this.nrCartao = nrCartao;
 	}
 
 	public String getTipo() {
@@ -79,38 +61,102 @@ public class CartaoCredito {
 		this.tipo = tipo;
 	}
 
-	public Double getSaldo() {
-		return saldo;
+	public Date getDtFechamentoFatura() {
+		return dtFechamentoFatura;
 	}
 
-	//VERIFICAR SE TEM QUE TIRAR
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
+	public void setDtFechamentoFatura(Date dtFechamentoFatura) {
+		this.dtFechamentoFatura = dtFechamentoFatura;
 	}
 
-	public boolean isLacamentoAuto() {
-		return lacamentoAuto;
+	public Date getDtVencFatura() {
+		return dtVencFatura;
 	}
 
-	public void setLacamentoAuto(boolean lacamentoAuto) {
-		this.lacamentoAuto = lacamentoAuto;
+	public void setDtVencFatura(Date dtVencFatura) {
+		this.dtVencFatura = dtVencFatura;
 	}
-	
-	
-	//QUAL PARAMETRAO PASSAR PARA DELETAR O CARTÃO?
-	public void deletar(int numero) {
-		this.idBanco = null;
-		this.nome = null;
-		this.numero = 0;
-		this.agencia = 0;
-		this.senhaApp = null;
-		this.tipo = null;
-		this.saldo = null;
-		this.lacamentoAuto = false;
-	}
-	
-	
-	
-	
 
+	public Date getDtValidadeCartao() {
+		return dtValidadeCartao;
+	}
+
+	public void setDtValidadeCartao(Date dtValidadeCartao) {
+		this.dtValidadeCartao = dtValidadeCartao;
+	}
+
+	public Double getLimiteDispo() {
+		return limiteDispo;
+	}
+
+	public void setLimiteDispo(Double limiteDispo) {
+		this.limiteDispo = limiteDispo;
+	}
+
+	public Double getLimiteTotal() {
+		return limiteTotal;
+	}
+
+	public void setLimiteTotal(Double limiteTotal) {
+		this.limiteTotal = limiteTotal;
+	}
+
+	public boolean isLancamentoAuto() {
+		return lancamentoAuto;
+	}
+
+	public void setLancamentoAuto(boolean lancamentoAuto) {
+		this.lancamentoAuto = lancamentoAuto;
+	}
+	
+	public String getSenhaCartao() {
+		return senhaCartao;
+	}
+
+	public void setSenhaCartao(String senhaCartao) {
+		this.senhaCartao = senhaCartao;
+	}
+
+	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal, String senhaCartao){
+		this.setLancamentoAuto(true);
+		this.setIdCartao(idCartao);
+		this.setNrCartao(nrCartao);
+		this.setTipo(tipo);
+		this.setDtFechamentoFatura(dtFechamentoFatura);
+		this.setDtVencFatura(dtVencFatura);
+		this.setDtValidadeCartao(dtValidadeCartao);
+		this.setDtVencFatura(dtVencFatura);
+		this.setLimiteDispo(limiteDispo);	
+		this.setSenhaCartao(senhaCartao);
+	}
+	
+	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal){
+		this.setLancamentoAuto(false);
+		this.setIdCartao(idCartao);
+		this.setNrCartao(nrCartao);
+		this.setTipo(tipo);
+		this.setDtFechamentoFatura(dtFechamentoFatura);
+		this.setDtVencFatura(dtVencFatura);
+		this.setDtValidadeCartao(dtValidadeCartao);
+		this.setDtVencFatura(dtVencFatura);
+		this.setLimiteDispo(limiteDispo);	
+	}
+	
+	public String consultarCartaoCredito(String apelido){
+		return "Apelido: " + apelido + "\nNúmero cartão: " + nrCartao + "\nTipo: " + tipo + "\nData de Fechamento Fatura: " + dtFechamentoFatura + "\nData de Vencimento Fatura: " + dtVencFatura + "\nData de Validade do Cartao: " + dtValidadeCartao + "\nLimite Disponível: " + limiteDispo + "\nLimite Total: " + limiteTotal + "\nBandeira: " + bandeira;
+	}
+	
+	public void deletarCartaoCredito(String apelido) {
+		this.setApelido(null);
+		this.setIdCartao(0);
+		this.setNrCartao(0);
+		this.setTipo(null);
+		this.setDtFechamentoFatura(null);
+		this.setDtVencFatura(null);
+		this.setDtValidadeCartao(null);
+		this.setLimiteDispo(0.0);
+		this.setLimiteTotal(0.0);
+		this.setSenhaCartao(null);
+		this.setLancamentoAuto(false);
+	}
 }

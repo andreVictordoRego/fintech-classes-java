@@ -18,8 +18,7 @@ public class Objetivos {
 	}
 
 
-	public Objetivos(int idObjetivo, String nome, Date dtInicial, Double vlObjetivo, Double vlAtual,
-			String periodicidade) {
+	public Objetivos(int idObjetivo, String nome, Date dtInicial, Double vlObjetivo, Double vlAtual, String periodicidade) {
 		this.idObjetivo = idObjetivo;
 		this.nome = nome;
 		this.dtInicial = dtInicial;
