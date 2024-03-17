@@ -18,7 +18,6 @@ public class Objetivos {
 	}
 
 
-<<<<<<< HEAD
 	public Objetivos(int idObjetivo, String nome, Date dtInicial, Date dtFinal, Double vlObjetivo, Double vlAtual,
 			String periodicidade) {
 		this.setIdObjetivo(idObjetivo);
@@ -28,7 +27,8 @@ public class Objetivos {
 		this.setVlObjetivo(vlObjetivo);
 		this.setVlAtual(vlAtual);
 		this.setPeriodicidade(periodicidade);
-=======
+	}
+
 	public Objetivos(int idObjetivo, String nome, Date dtInicial, Double vlObjetivo, Double vlAtual, String periodicidade) {
 		this.idObjetivo = idObjetivo;
 		this.nome = nome;
@@ -36,7 +36,6 @@ public class Objetivos {
 		this.vlObjetivo = vlObjetivo;
 		this.vlAtual = vlAtual;
 		this.periodicidade = periodicidade;
->>>>>>> 73b90e9b0283b10354c246cc9ad4e919663e330b
 	}
 
 
