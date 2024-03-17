@@ -14,7 +14,7 @@ public class ContaInvest {
 	private Double precoCusto;
 	private Double quantidade; //verificar se é double ou float
 	private Double saldo;
-	private Float porcentagem;
+	private Double porcentagem;
 	private String descricao;
 	private boolean lancamentoAuto;
 	
@@ -25,20 +25,20 @@ public class ContaInvest {
 	
 	//CONSTRUTORES
 	public ContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor,
-			Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Float porcentagem, String descricao,
+			Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao,
 			boolean lancamentoAuto) {
-		this.idContaInvest = idContaInvest;
-		this.estrategia = estrategia;
-		this.produto = produto;
-		this.instituicao = instituicao;
-		this.emissor = emissor;
-		this.dataAplic = dataAplic;
-		this.precoCusto = precoCusto;
-		this.quantidade = quantidade;
-		this.saldo = saldo;
-		this.porcentagem = porcentagem;
-		this.descricao = descricao;
-		this.lancamentoAuto = lancamentoAuto;
+		 	this.idContaInvest = idContaInvest;
+		    this.estrategia = estrategia;
+		    this.produto = produto;
+		    this.instituicao = instituicao;
+		    this.emissor = emissor;
+		    this.dataAplic = dataAplic;
+		    this.precoCusto = precoCusto;
+		    this.quantidade = quantidade;
+		    this.saldo = saldo;
+		    this.porcentagem = porcentagem;
+		    this.descricao = descricao;
+		    this.lancamentoAuto = lancamentoAuto;
 	}
 	
 	//GETTER AND SETTERS PADROES
@@ -116,11 +116,11 @@ public class ContaInvest {
 		this.saldo = saldo;
 	}
 
-	public Float getPorcentagem() {
+	public Double getPorcentagem() {
 		return porcentagem;
 	}
 
-	public void setPorcentagem(Float porcentagem) {
+	public void setPorcentagem(Double porcentagem) {
 		this.porcentagem = porcentagem;
 	}
 
@@ -141,25 +141,36 @@ public class ContaInvest {
 	}
 	
 	//METODOS
-	
-	//verificar com time
-	public void consultar(int idContaInvest) {
-		
+	public void cadastrarContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor, Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao) {
+	this.setIdContaInvest(idContaInvest);
+	this.setEstrategia(estrategia);
+	this.setProduto(produto);
+	this.setInstituicao(instituicao);
+	this.setEmissor(emissor);
+	this.setDataAplic(dataAplic);
+	this.setPrecoCusto(precoCusto);
+	this.setQuantidade(quantidade);
+	this.setSaldo(saldo);
+	this.setPorcentagem(porcentagem);
+	this.setDescricao(descricao);
+	}
+
+	public String consultarContaInvest(int idContaInvest) {
+		return "Estratégia: " + estrategia + "\nProduto: " + produto + "\nInstituição: " + instituicao + "\nEmissor: " + emissor + "\nData da Aplicação: " + dataAplic + "\nPreço de Unitário: " + precoCusto + "\nQuantidade de Cotas: " + quantidade + "\nSaldo: " + saldo + "\nPorcentagem de Rendimento: " + porcentagem + "\nDescrição: " + descricao + "\nLançamento Automático: " + lancamentoAuto ;
 	}
 	
-	public void deletar(int idContaInvest) {
-		this.idContaInvest = 0;
-		this.estrategia = null;
-		this.produto = null;
-		this.instituicao = null;
-		this.emissor = null;
-		this.dataAplic = null;
-		this.precoCusto = null;
-		this.quantidade = null;
-		this.saldo = null;
-		this.porcentagem = null;
-		this.descricao = null;
-		this.lancamentoAuto = false; //verificar com time
+	public void deletarContaInvest(int idContaInvest) {
+		this.setIdContaInvest(0);
+		this.setEstrategia(null);
+		this.setProduto(null);
+		this.setInstituicao(null);
+		this.setEmissor(null);
+		this.setDataAplic(null);
+		this.setPrecoCusto(0.0);
+		this.setQuantidade(0.0);
+		this.setSaldo(0.0);
+		this.setPorcentagem(0.0);
+		this.setDescricao(null);
 	}
 	
 }
