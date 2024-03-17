@@ -11,6 +11,7 @@ public class CartaoCredito {
 	private Double limiteDispo,limiteTotal;
 	private boolean lancamentoAuto;
 	private Bandeira bandeira;
+	private Fatura fatura;
 	
 	public CartaoCredito() {
 	}
@@ -27,6 +28,16 @@ public class CartaoCredito {
 		this.limiteTotal = limiteTotal;
 		this.senhaCartao = senhaCartao;
 		this.lancamentoAuto = lancamentoAuto;
+	}
+
+	
+	
+	public Fatura getFatura() {
+		return fatura;
+	}
+
+	public void setFatura(Fatura fatura) {
+		this.fatura = fatura;
 	}
 
 	public String getApelido() {
@@ -115,6 +126,15 @@ public class CartaoCredito {
 
 	public void setSenhaCartao(String senhaCartao) {
 		this.senhaCartao = senhaCartao;
+	}
+
+	
+	public Bandeira getBandeira() {
+		return bandeira;
+	}
+
+	public void setBandeira(Bandeira bandeira) {
+		this.bandeira = bandeira;
 	}
 
 	public void cadastrarCartaoCredito(String apelido, int idCartao, int nrCartao, String tipo, Date dtFechamentoFatura,Date dtVencFatura, Date dtValidadeCartao, Double limiteDispo, Double limiteTotal, String senhaCartao){

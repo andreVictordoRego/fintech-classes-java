@@ -4,12 +4,10 @@ import java.util.Date;
 
 public class Fatura {
 	
-	//ATRIBUTOS
 	private int idFatura;
 	private Date dtVenc;
 	private Double vlTotal;
 	
-	//CONSTRUTORES
 	public Fatura() {
 	}
 
@@ -19,8 +17,6 @@ public class Fatura {
 		this.vlTotal = vlTotal;
 	}
 
-	
-	//GETTERS AND SETTERS
 	public int getIdFatura() {
 		return idFatura;
 	}
@@ -45,14 +41,18 @@ public class Fatura {
 		this.vlTotal = vlTotal;
 	}
 
-	
-	//verificar o que ele vai mostrar
-	public void consultar(int idFatura) {	
+
+	public String consultarFatura(int idFatura) {	
+		return "Data de Vencimento da Fatura: " + dtVenc + "\nValor Total da Fatura: " + vlTotal;
 	}
 	
-	public void informarPag(double vlTotal, Date dtVenc) {
-		this.vlTotal = vlTotal;
-		this.dtVenc = dtVenc;
+	public String informarPag(double vlTotal, Date dtVenc) {
+		
+		boolean validacao = true;
+		if (validacao == true) {
+			return "Pagamento efetuado";
+		}
+		return null;
 	}
 	
 }

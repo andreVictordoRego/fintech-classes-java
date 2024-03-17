@@ -4,7 +4,6 @@ import java.util.Date;
 
 public class ContaInvest {
 	
-	//ATRIBUTOS
 	private int idContaInvest;
 	private String estrategia;
 	private String produto;
@@ -12,18 +11,16 @@ public class ContaInvest {
 	private String emissor;
 	private Date dataAplic;
 	private Double precoCusto;
-	private Double quantidade; //verificar se é double ou float
+	private Double quantidade;
 	private Double saldo;
 	private Double porcentagem;
 	private String descricao;
 	private boolean lancamentoAuto;
 	
-	//CONSTRUTORE PADRÃO
 	public ContaInvest() {
 		
 	}
-	
-	//CONSTRUTORES
+
 	public ContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor, Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao, boolean lancamentoAuto) {
 		 	this.idContaInvest = idContaInvest;
 		    this.estrategia = estrategia;
@@ -39,7 +36,6 @@ public class ContaInvest {
 		    this.lancamentoAuto = lancamentoAuto;
 	}
 	
-	//GETTER AND SETTERS PADROES
 
 	public int getIdContaInvest() {
 		return idContaInvest;
@@ -109,7 +105,6 @@ public class ContaInvest {
 		return saldo;
 	}
 
-	//VERIFICAR SE TEM QUE TIRAR O SET SALDO(ACHO QUE SIM)
 	public void setSaldo(Double saldo) {
 		this.saldo = saldo;
 	}
@@ -170,5 +165,7 @@ public class ContaInvest {
 		this.setPorcentagem(0.0);
 		this.setDescricao(null);
 	}
+	
+	
 	
 }
