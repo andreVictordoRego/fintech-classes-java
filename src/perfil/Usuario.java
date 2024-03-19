@@ -105,6 +105,7 @@ public class Usuario extends Pessoa {
 	}
 	
 	public void deletarUser(int idUsuario, String senha) {
+		//verificacao no banco de dados de email e senha
 		super.setCpf(0);
 		super.setDtNasc(null);
 		super.setGenero(null);

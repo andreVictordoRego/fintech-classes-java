@@ -1,22 +1,18 @@
 package perfil;
 
-public class ContaBanco {
+public class ContaBanco extends Conta{
 	
-	private String apelido;
 	private String idBanco;
-	private int numero;
 	private int agencia;
-	private String senhaApp;
 	private String tipo;
-	private Double saldo;
-	private boolean lancamentoAuto;
 	
 	public ContaBanco() {
 		
 	}
 	
 	public ContaBanco(String apelido, String idBanco, int numero, int agencia, String senhaApp, String tipo, Double saldo, boolean lancamentoAuto) {
-        this.apelido = apelido;
+        super();
+		this.apelido = apelido;
         this.idBanco = idBanco;
         this.numero = numero;
         this.agencia = agencia;
@@ -26,28 +22,14 @@ public class ContaBanco {
         this.lancamentoAuto = lancamentoAuto;
     }
 
-	public String getApelido() {
-		return apelido;
-	}
-
-	public void setApelido(String apelido) {
-		this.apelido = apelido;
-	}
-
+	
+	
 	public String getIdBanco() {
 		return idBanco;
 	}
 
 	public void setIdBanco(String idBanco) {
 		this.idBanco = idBanco;
-	}
-
-	public int getNumero() {
-		return numero;
-	}
-
-	public void setNumero(int numero) {
-		this.numero = numero;
 	}
 
 	public int getAgencia() {
@@ -58,14 +40,6 @@ public class ContaBanco {
 		this.agencia = agencia;
 	}
 
-	public String getSenhaApp() {
-		return senhaApp;
-	}
-
-	public void setSenhaApp(String senhaApp) {
-		this.senhaApp = senhaApp;
-	}
-
 	public String getTipo() {
 		return tipo;
 	}
@@ -74,23 +48,8 @@ public class ContaBanco {
 		this.tipo = tipo;
 	}
 
-	public Double getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
-	}
-
-	public boolean isLancamentoAuto() {
-		return lancamentoAuto;
-	}
-
-	public void setLancamentoAuto(boolean lancamentoAuto) {
-		this.lancamentoAuto = lancamentoAuto;
-	}
-	
-	public void cadastrarContaBanco(String apelido, String idBanco, int numero, int agencia, String senhaApp, String tipo, Double saldo){
+	public void cadastrarContaBanco(int idContaBanco, String apelido, String idBanco, int numero, int agencia, String senhaApp, String tipo, Double saldo){
+		this.setIdBanco(idBanco);
 		this.setLancamentoAuto(true);
 		this.setApelido(apelido);
 		this.setIdBanco(idBanco);
@@ -112,6 +71,18 @@ public class ContaBanco {
 	public String consultarContaBanco(String apelido) {
 		return "Apelido: " + apelido + "Agência: " + agencia + "Número: " + numero + "Tipo da conta: " + tipo + "Saldo: " + saldo;
 	}
+	
+	public void editarContaBanco(String apelido, String idBanco, int numero, int agencia, String senhaApp, String tipo, Double saldo) {
+		this.setLancamentoAuto(true);
+		this.setApelido(apelido);
+		this.setIdBanco(idBanco);
+		this.setNumero(numero);
+		this.setAgencia(agencia);
+		this.setSenhaApp(senhaApp);
+		this.setTipo(tipo);
+		this.setSaldo(saldo);
+	}
+	
 	
 	public void deletarContaBanco(String apelido) {
 		this.setApelido(null);

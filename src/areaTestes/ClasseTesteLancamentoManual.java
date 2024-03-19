@@ -1,4 +1,5 @@
 package areaTestes;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -6,9 +7,11 @@ import java.util.Date;
 import perfil.Categoria;
 import perfil.LancamentoManual;
 
-public class ClasseTeste2 {
+public class ClasseTesteLancamentoManual {
 
 	public static void main(String[] args) {
+		//Classe de teste referente a classe LancamentoManual
+		
 		
 		 Date dataLancamento = null;
 	        String dataString = "28/03/1991";
@@ -43,15 +46,7 @@ public class ClasseTeste2 {
 		lanc1.deletarLancamento(1);
 		System.out.println(lanc1.consultarLancamento(1));
 		
-		
-		
-		
-		
-		
-		
-		
-		
+
 	}
 
-	
 }

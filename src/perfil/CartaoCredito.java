@@ -168,13 +168,13 @@ public class CartaoCredito {
 		this.setFatura(fatura);
 	}
 	
-	public String consultarCartaoCredito(String apelido){
+	public String consultarCartaoCredito(int idCartao){
 		String varBandeira = bandeira.getNome();
 		Double verFatura = fatura.getVlTotal();
 		return "Apelido: " + apelido + "\nNúmero cartão: " + nrCartao + "\nTipo: " + tipo + "\nData de Fechamento Fatura: " + dtFechamentoFatura + "\nData de Vencimento Fatura: " + dtVencFatura + "\nData de Validade do Cartao: " + dtValidadeCartao + "\nLimite Disponível: " + limiteDispo + "\nLimite Total: " + limiteTotal + "\nBandeira: " + varBandeira + "\nFatura: " + verFatura;
 	}
 	
-	public void deletarCartaoCredito(String apelido) {
+	public void deletarCartaoCredito(int idCartao) {
 		this.setApelido(null);
 		this.setIdCartao(0);
 		this.setNrCartao(0);

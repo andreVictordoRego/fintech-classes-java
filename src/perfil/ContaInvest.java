@@ -2,7 +2,7 @@ package perfil;
 
 import java.util.Date;
 
-public class ContaInvest {
+public class ContaInvest extends Conta {
 	
 	private int idContaInvest;
 	private String estrategia;
@@ -12,10 +12,8 @@ public class ContaInvest {
 	private Date dataAplic;
 	private Double precoCusto;
 	private Double quantidade;
-	private Double saldo;
 	private Double porcentagem;
 	private String descricao;
-	private boolean lancamentoAuto;
 	
 	public ContaInvest() {
 		
@@ -37,6 +35,8 @@ public class ContaInvest {
 	}
 	
 
+	
+	
 	public int getIdContaInvest() {
 		return idContaInvest;
 	}
@@ -101,14 +101,6 @@ public class ContaInvest {
 		this.quantidade = quantidade;
 	}
 
-	public Double getSaldo() {
-		return saldo;
-	}
-
-	public void setSaldo(Double saldo) {
-		this.saldo = saldo;
-	}
-
 	public Double getPorcentagem() {
 		return porcentagem;
 	}
@@ -125,14 +117,6 @@ public class ContaInvest {
 		this.descricao = descricao;
 	}
 
-	public boolean isLancamentoAuto() {
-		return lancamentoAuto;
-	}
-
-	public void setLancamentoAuto(boolean lancamentoAuto) {
-		this.lancamentoAuto = lancamentoAuto;
-	}
-	
 	//METODOS
 	public void cadastrarContaInvest(int idContaInvest, String estrategia, String produto, String instituicao, String emissor, Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao) {
 	this.setIdContaInvest(idContaInvest);
@@ -150,6 +134,19 @@ public class ContaInvest {
 
 	public String consultarContaInvest(int idContaInvest) {
 		return "Estratégia: " + estrategia + "\nProduto: " + produto + "\nInstituição: " + instituicao + "\nEmissor: " + emissor + "\nData da Aplicação: " + dataAplic + "\nPreço de Unitário: " + precoCusto + "\nQuantidade de Cotas: " + quantidade + "\nSaldo: " + saldo + "\nPorcentagem de Rendimento: " + porcentagem + "\nDescrição: " + descricao + "\nLançamento Automático: " + lancamentoAuto ;
+	}
+	
+	public void editarContaInvest(String estrategia, String produto, String instituicao, String emissor, Date dataAplic, Double precoCusto, Double quantidade, Double saldo, Double porcentagem, String descricao) {
+		this.setEstrategia(estrategia);
+		this.setProduto(produto);
+		this.setInstituicao(instituicao);
+		this.setEmissor(emissor);
+		this.setDataAplic(dataAplic);
+		this.setPrecoCusto(precoCusto);
+		this.setQuantidade(quantidade);
+		this.setSaldo(saldo);
+		this.setPorcentagem(porcentagem);
+		this.setDescricao(descricao);
 	}
 	
 	public void deletarContaInvest(int idContaInvest) {

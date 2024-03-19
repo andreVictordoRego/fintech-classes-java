@@ -47,12 +47,16 @@ public class Categoria {
 		this.setTipoCategoria(tipoCategoria);
 	}
 	
-	public void editarCategoria(int idCategoria, String nomeCategoria, String tipoCategoria) {
+	public void editarCategoria(String nomeCategoria, String tipoCategoria) {
 		this.setNomeCategoria(nomeCategoria);
 		this.setTipoCategoria(tipoCategoria);
 	}
-
-	public void deletarCategoria(int idCategoria, String nomeCategoria, String tipoCategoria) {
+	
+	public String consultarCategoria() {
+		return "Nome da Categoria: " + nomeCategoria + "\nTipo da Categoria: " + tipoCategoria;
+	}
+	
+	public void deletarCategoria(int idCategoria) {
 		this.setIdCategoria(0);
 		this.setNomeCategoria(null);
 		this.setTipoCategoria(null);

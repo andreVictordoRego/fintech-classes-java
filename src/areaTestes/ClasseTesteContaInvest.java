@@ -6,29 +6,29 @@ import java.util.Date;
 
 import perfil.ContaInvest;
 
-
-
-public class ClasseTeste3 {
+public class ClasseTesteContaInvest {
 
 	public static void main(String[] args) {
+		//Classe de teste referente a classe ContaInvest
+		
 		 Date dataLancamento = null;
 	        String dataString = "28/03/1991";
 	        SimpleDateFormat formatoData = new SimpleDateFormat("dd/MM/yyyy");
 	        try {
 	            dataLancamento = formatoData.parse(dataString);
-	            System.out.println(dataLancamento);
+	           // System.out.println(dataLancamento);
 	        } catch (ParseException e) {
 	            e.printStackTrace();
 	        }
 
-	        ContaInvest conta1 = new ContaInvest();
-	        
+	        ContaInvest conta1 = new ContaInvest();	        
 	        conta1.cadastrarContaInvest(1, "Economia", "Produto1", "BancoXYZ", "EmissorUVW", dataLancamento, 103.20, 3.4, 99.6, 3.2, "Descricao Padrao");
-	
 	        System.out.println(conta1.consultarContaInvest(1));
 	        
-	        conta1.deletarContaInvest(1);
+	        conta1.editarContaInvest("Investimento", "CDB", "Itau", "RICO", dataLancamento, 9.0, 3.5, 100.30, 3.0, "Investimento recomendado");
+	        System.out.println(conta1.consultarContaInvest(1));
 	        
+	        conta1.deletarContaInvest(1);	        
 	        System.out.println(conta1.consultarContaInvest(1));
 	       
 

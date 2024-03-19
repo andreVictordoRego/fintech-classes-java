@@ -1,14 +1,17 @@
 package areaTestes;
+
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+
 import perfil.Bandeira;
 import perfil.CartaoCredito;
 import perfil.Fatura;
 
-public class ClasseTeste4 {
+public class ClasseTesteCartaoCredito {
 
 	public static void main(String[] args) {
+		//Classe de teste referente a classe CartaoCredito, Bandeira e Fatura
 		
 		 Date dataLancamento = null;
 	        String dataString = "28/03/1991";
@@ -28,11 +31,12 @@ public class ClasseTeste4 {
 		fatura1.cadastrarFatura(1, dataLancamento, 1000.0);
 		cartao1.cadastrarCartaoCredito("CartaoNubank", 1, 312321, "credito", dataLancamento, dataLancamento, dataLancamento, 999999.0, 92319.0, "senha", bandeira1, fatura1);
 		
-		System.out.println(cartao1.consultarCartaoCredito("apelido"));
+		System.out.println(cartao1.consultarCartaoCredito(1));
 		cartao1.setLimiteTotal(99999999.0);
 		cartao1.setLimiteDispo(98823.0);
-		cartao1.setBandeira(bandeira1);
-		
-		System.out.println(cartao1.consultarCartaoCredito("apelido"));
+		cartao1.setBandeira(bandeira1);		
+		System.out.println(cartao1.consultarCartaoCredito(1));
+
 	}
+
 }

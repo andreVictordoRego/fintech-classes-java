@@ -151,9 +151,9 @@ public class Objetivos {
 	   
    }
 	
-   public void consultar(String nome) {
-	   this.setNome(nome);
-	   
+   public String consultar(int idObjetivo) {
+	   return "Nome do Objetivo: " + nome + "\nData Inicial: " + dtInicial + "\nData Final: " + dtFinal + "\nData do Deposito: " + dtDeposito + "\nValor do Objetivo: "
++ vlObjetivo + "\nValor Atual Acumulado: " + vlAtual + "\nPeriodicidade: " + periodicidade;	  
    }
    
    public void deletar(int idObjetivo, String nome, Date dtInicial, Date dtFinal, Double vlObjetivo, Double vlAtual, String periodicidade) {
